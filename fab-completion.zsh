@@ -13,9 +13,6 @@
 #
 
 _fab_list() {
-	a=$(`fab --shortlist`)
-	if $a; then reply=$a; else reply=''; fi
-	
-    
+	reply=(`fab --shortlist`) 
 }
 compctl -K _fab_list fab
